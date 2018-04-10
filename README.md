@@ -17,7 +17,8 @@
 #### TCP三次握手
 TCP是因特网中的传输层协议，使用三次握手协议建立连接。当主动方发出SYN连接请求后，等待对方回答
 SYN+ACK ，并最终对对方的 SYN 执行 ACK 确认。这种建立连接的方法可以防止产生错误的连接，TCP使用的流量控制协议是可变大小的滑动窗口协议。 
-![](https://baike.baidu.com/pic/TCP/33012/0/a1ad16fa330e9cae59ee90ca?fr=lemma&ct=single)
+
+[](https://baike.baidu.com/pic/TCP/33012/0/a1ad16fa330e9cae59ee90ca?fr=lemma&ct=single)
 
 TCP三次握手的过程如下：
 1. 客户端发送SYN（SEQ=x）报文给服务器端，进入SYN_SEND状态。
@@ -27,11 +28,16 @@ TCP三次握手的过程如下：
 
 #### TCP四次终止握手
 建立一个连接需要三次握手，而终止一个连接要经过四次握手，这是由TCP的半关闭（half-close）造成的。具体过程如下图所示。
+
 ![](https://baike.baidu.com/pic/TCP/33012/0/bf4875638e06d1590c33faf9?fr=lemma&ct=single)
 
 (1) 某个应用进程首先调用close，称该端执行“主动关闭”（active close）。该端的TCP于是发送一个FIN分节，表示数据发送完毕。
+
 (2) 接收到这个FIN的对端执行 “被动关闭”（passive close），这个FIN由TCP确认。
+
 注意：FIN的接收也作为一个文件结束符（end-of-file）传递给接收端应用进程，放在已排队等候该应用进程接收的任何其他数据之后，因为，FIN的接收意味着接收端应用进程在相应连接上再无额外数据可接收。
+
 (3) 一段时间后，接收到这个文件结束符的应用进程将调用close关闭它的套接字。这导致它的TCP也发送一个FIN。
-(4) 接收这个最终FIN的原发送端TCP（即执行主动关闭的那一端）确认这个FIN。 [1] 
+
+(4) 接收这个最终FIN的原发送端TCP（即执行主动关闭的那一端）确认这个FIN。
 既然每个方向都需要一个FIN和一个ACK，因此通常需要4个分节。
