@@ -18,7 +18,7 @@
 TCP是因特网中的传输层协议，使用三次握手协议建立连接。当主动方发出SYN连接请求后，等待对方回答
 SYN+ACK ，并最终对对方的 SYN 执行 ACK 确认。这种建立连接的方法可以防止产生错误的连接，TCP使用的流量控制协议是可变大小的滑动窗口协议。 
 
-![](https://baike.baidu.com/pic/TCP/33012/0/a1ad16fa330e9cae59ee90ca?fr=lemma&ct=single)
+![](https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=d30689c3828ba61ecbe3c07d205dfc6f/29381f30e924b899cb32f6316e061d950a7bf6a9.jpg)
 
 TCP三次握手的过程如下：
 1. 客户端发送SYN（SEQ=x）报文给服务器端，进入SYN_SEND状态。
