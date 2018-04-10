@@ -18,7 +18,7 @@
 TCP是因特网中的传输层协议，使用三次握手协议建立连接。当主动方发出SYN连接请求后，等待对方回答
 SYN+ACK ，并最终对对方的 SYN 执行 ACK 确认。这种建立连接的方法可以防止产生错误的连接，TCP使用的流量控制协议是可变大小的滑动窗口协议。 
 
-[](https://baike.baidu.com/pic/TCP/33012/0/a1ad16fa330e9cae59ee90ca?fr=lemma&ct=single)
+![](https://baike.baidu.com/pic/TCP/33012/0/a1ad16fa330e9cae59ee90ca?fr=lemma&ct=single)
 
 TCP三次握手的过程如下：
 1. 客户端发送SYN（SEQ=x）报文给服务器端，进入SYN_SEND状态。
@@ -29,7 +29,7 @@ TCP三次握手的过程如下：
 #### TCP四次终止握手
 建立一个连接需要三次握手，而终止一个连接要经过四次握手，这是由TCP的半关闭（half-close）造成的。具体过程如下图所示。
 
-![](https://baike.baidu.com/pic/TCP/33012/0/bf4875638e06d1590c33faf9?fr=lemma&ct=single)
+![](https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=c2837728728b4710da22f59ea2a7a898/a1ec08fa513d269721cc875455fbb2fb4316d898.jpg)
 
 (1) 某个应用进程首先调用close，称该端执行“主动关闭”（active close）。该端的TCP于是发送一个FIN分节，表示数据发送完毕。
 
